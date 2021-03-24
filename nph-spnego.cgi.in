@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cmd=$(realpath "$0")
+dir=${cmd%/*}
+exec ${dir}/spnegocgi -t '%%KEYTAB%%' -s '%%SERVICE%%' -h '%%HOST%%'
